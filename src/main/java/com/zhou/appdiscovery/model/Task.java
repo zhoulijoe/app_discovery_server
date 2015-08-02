@@ -1,20 +1,29 @@
 package com.zhou.appdiscovery.model;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.hateoas.ResourceSupport;
 
-public class Task {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Task extends ResourceSupport {
 
     @Id
-    private String id;
+    @GeneratedValue
+    private Long id;
 
     private String summary;
 
-    public Task(String summary) {
-        this.summary = summary;
+    public Task() {
     }
 
-    public String getId() {
+    public Long getTaskId() {
         return id;
+    }
+
+    public void setTaskId(Long id) {
+        this.id = id;
     }
 
     public String getSummary() {
