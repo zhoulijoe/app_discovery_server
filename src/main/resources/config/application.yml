@@ -1,5 +1,15 @@
 ---
 
+# Embedded servlet port
+server.port: 8080
+
+# Logging file path
+logging.file:
+
+# Embedded tomcat config
+server.tomcat.access-log-enabled: false
+server.tomcat.basedir:
+
 ## DB datasource configuration for postgresql ##
 spring.datasource.url: jdbc:postgresql://app-discovery-db/appdiscovery
 spring.datasource.username: appdiscovery
