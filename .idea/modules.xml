@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../app_discovery_deploy/app_discovery_deploy.iml" filepath="$PROJECT_DIR$/../app_discovery_deploy/app_discovery_deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_discovery_server.iml" filepath="$PROJECT_DIR$/app_discovery_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app_discovery_web/app_discovery_web.iml" filepath="$PROJECT_DIR$/../app_discovery_web/app_discovery_web.iml" />
     </modules>
   </component>
 </project>

@@ -16,7 +16,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController("TaskControllerV1")
-@RequestMapping("/api/v1/")
+@RequestMapping("/v1/")
 public class TaskController {
 
     @Autowired
