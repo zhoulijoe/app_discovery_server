@@ -40,6 +40,8 @@ dependencies {
         runtime("org.hsqldb:hsqldb:2.3.3")
     }
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testRuntime("com.jayway.jsonpath:json-path:2.0.0")
+    testRuntime("org.hsqldb:hsqldb:2.3.3")
 }
 
 task wrapper(type: Wrapper) {
