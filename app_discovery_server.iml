@@ -91,10 +91,10 @@
     <orderEntry type="library" exported="" name="Gradle: xml-apis:xml-apis:1.0.b2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.postgresql:postgresql:9.4-1201-jdbc41" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.hsqldb:hsqldb:2.3.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.jayway.jsonpath:json-path:2.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.minidev:json-smart:2.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.minidev:asm:1.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: asm:asm:3.3.1" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: org.hsqldb:hsqldb:2.3.3" level="project" />
   </component>
 </module>

@@ -13,6 +13,10 @@ Find app for specific task
     - Active Profiles: local
 - Hit run/debug button
 
+### Gradle CLI Using Embedded DB
+    
+    ./gradlew bootRun -Pspring.profiles.active=local
+
 ### Using Vagrant Env with Real SQL DB
 - Open project in Intellij
 - Run gradle build task to generate app jar

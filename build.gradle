@@ -16,20 +16,17 @@ jar {
     version = '0.0.1-SNAPSHOT'
 }
 
-repositories {
-    mavenCentral()
-}
-
-// Include embedded DB jar if active profiles passed in via command line includes local
-def shouldUseEmbeddedDB() {
+// Allow project property specified in command line to be passed through to bootRun task
+tasks.withType(org.springframework.boot.gradle.run.BootRunTask) {
     final profilePropertyKey = 'spring.profiles.active'
 
     if (project.hasProperty(profilePropertyKey)) {
-        final activeProfiles = project.property(profilePropertyKey)?.split(',') ?: []
-        'local' in activeProfiles
-    } else {
-        false
+        systemProperty(profilePropertyKey, project.property(profilePropertyKey))
     }
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
@@ -37,12 +34,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.hateoas:spring-hateoas:0.17.0.RELEASE")
     compile("org.postgresql:postgresql:9.4-1201-jdbc41")
-    if (shouldUseEmbeddedDB()) {
-        runtime("org.hsqldb:hsqldb:2.3.3")
-    }
+    runtime("org.hsqldb:hsqldb:2.3.3")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testRuntime("com.jayway.jsonpath:json-path:2.0.0")
-    testRuntime("org.hsqldb:hsqldb:2.3.3")
 }
 
 task wrapper(type: Wrapper) {
